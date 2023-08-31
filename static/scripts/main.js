@@ -57,7 +57,7 @@ async function showFile(){
             ).then(
                 success => {
                     console.log(success);
-                    window.location.replace("http://localhost:5000/search");
+                    window.location.replace("/search");
                 }
             ).catch(
                 error => console.log(error)
