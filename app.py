@@ -25,7 +25,7 @@ def index():
 
 @app.post('/')
 def parse_file():
-    if session['usr_sheet']:
+    if 'usr_sheet' in session and session['usr_sheet']:
         prevfile = session.get('usr_sheet')
         if prevfile:
             if os.path.exists(f"sheets/{prevfile}"):
