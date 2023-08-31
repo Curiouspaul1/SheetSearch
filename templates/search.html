@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Your Sheet</title>
+    <link rel="stylesheet" href="../static/css/search.css">
+</head>
+<body>
+    <div class="container">
+        <div id="top-div">
+            <div id="circles">
+                <div id="red"></div>
+                <div id="yellow"></div>
+                <div id="green"></div>
+            </div>
+            <div id="settings">
+                <button id="change-file">Change File</button>
+            </div>
+        </div>
+
+        <div id="search-area">
+            <div id="search-form">
+                <form action="{{url_for('find_matches')}}" method="post">
+                    <input name="query" type="text" placeholder="  Enter a search term/phrase" id="search-field">
+                    <button id="send_query">Search</button>
+                </form>
+
+                {% if search_results %}
+                    <div class="search_res">
+                        <table>
+                            <tr>
+                                {% for head in headers %}
+                                    <th>{{head}}</th>
+                                {% endfor %}
+                            </tr>
+                            {% for obj in search_results %}
+                                <tr>
+                                    {% for key, val in obj.items() %}
+                                        <td>{{val}}</td>
+                                    {% endfor %}
+                                </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                {% endif %}
+
+                {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    <ul class=flashes>
+                        {% for category, message in messages %}
+                            <li class="{{ category }}">{{ message }}</li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+                {% endwith %}
+            </div>
+        </div>
+    </div>
+    <script src="../static/scripts/search.js"></script>
+</body>
+</html>

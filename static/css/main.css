@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;1,100;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Sedgwick+Ave+Display&family=Tektur&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #046fd3;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #f4f4f4;
+    border-radius: 6px;
+    margin-top: 5%;
+    box-shadow: 2px 2px 5px #333;
+    background-color: #f3f3f3;
+}
+
+#top-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#top-div #circles {
+    display: flex;
+    flex-direction: row;
+}
+
+#top-div #circles div{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+#top-div #circles :not(:last-child)
+{
+    margin-right: 10px;
+}
+
+#top-div #circles #red {background-color: #fa4848;}
+#top-div #circles #green {background-color: hsl(146, 87%, 34%);}
+#top-div #circles #yellow {background-color: #f0bc23;}
+
+#search-bar {
+    border: 1px solid #d1d1d1;
+    padding-left: 12px;
+    border-radius: 25px;
+}
+
+#search-bar img {
+    margin-top: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+#search-bar input {
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+.upload-section {
+    margin-top: 5%;
+    padding:5%;
+}
+
+#upload-space {
+    border: 5px dotted #aaa;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #a0a0a0aa;
+}
+
+#upload-space button {
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #046fd3;
+    color: #fff;
+    border:none;
+    transition: ease-in-out;
+    transition-duration: 150ms;
+    margin-top: 20px;
+}
+
+#upload-space button:hover{
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+#upload-space i {
+    color: #d8dafb;
+    font-size: 300px;
+}
+
+.flashes li {
+    padding: 4px;
+    border-radius: 5px;
+    border:none;
+    color: #fff;
+    background-color: #db5959;
+    width: 70%;
+}
+
+.flashes {
+    -webkit-animation: cssAnimation 3s forwards; 
+    animation: cssAnimation 3s forwards;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    20%  {opacity: 0.8;}
+    40%  {opacity: 0.7;}
+    60%  {opacity: 0.5;}
+    90%  {opacity: 0.2;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    20%  {opacity: 0.8;}
+    40%  {opacity: 0.7;}
+    60%  {opacity: 0.5;}
+    90%  {opacity: 0.2;}
+    100% {opacity: 0;}
+}

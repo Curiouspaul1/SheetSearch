@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,700;1,100;1,500&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&family=Sedgwick+Ave+Display&family=Tektur&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #046fd3;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #f4f4f4;
+    border-radius: 6px;
+    margin-top: 5%;
+    box-shadow: 2px 2px 5px #333;
+    background-color: #f3f3f3;
+}
+
+#top-div #circles {
+    display: flex;
+    flex-direction: row;
+}
+
+#top-div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 75%;
+}
+
+#top-div #circles div{
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background-color: #000;
+}
+
+#top-div #circles :not(:last-child)
+{
+    margin-right: 10px;
+}
+
+#top-div #circles #red {background-color: #fa4848;}
+#top-div #circles #green {background-color: hsl(146, 87%, 34%);}
+#top-div #circles #yellow {background-color: #f0bc23;}
+
+#search-bar {
+    border: 1px solid #d1d1d1;
+    padding-left: 12px;
+    border-radius: 25px;
+}
+
+#search-bar img {
+    margin-top: 10px;
+    width: 16px;
+    height: 16px;
+}
+
+#search-bar input {
+    padding: 10px;
+    border: none;
+    outline: none;
+}
+
+#search-area {
+    margin-top: 5%;
+    padding:5%;
+}
+
+#search-form form{
+    display: flex;
+    flex-direction: column;
+}
+
+#search-form form input {
+    padding: 10px;
+    border-radius: 18px;
+    border:2px solid #4ea1ef;
+    outline: none;
+}
+
+#search-form form button {
+    margin-top: 3%;
+    width: 35%;
+    align-self: center;
+    padding: 10px;
+    background-color: #046fd3;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 20px;
+    border:none;
+    transition: ease-in-out;
+    transition-duration: 180ms;
+}
+
+#search-form button:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+#change-file {
+    padding: 8px;
+    border: none;
+    border-radius: 5px;
+    background-color: hsl(146, 87%, 34%);
+    color: #fff;
+    transition: ease-in-out;
+    transition-duration: 180ms;
+    font-size: 14px;
+}
+
+#change-file:hover {
+    cursor: pointer;
+    transform: scale(0.9);
+}
+
+.flashes li {
+    padding: 4px;
+    border-radius: 5px;
+    border:none;
+    color: #fff;
+    background-color: #f7c864;
+    width: 70%;
+}
+
+.flashes {
+    -webkit-animation: cssAnimation 3s forwards; 
+    animation: cssAnimation 3s forwards;
+    margin-top: 2%;
+}
+@keyframes cssAnimation {
+    0%   {opacity: 1;}
+    20%  {opacity: 0.8;}
+    40%  {opacity: 0.7;}
+    60%  {opacity: 0.5;}
+    90%  {opacity: 0.2;}
+    100% {opacity: 0;}
+}
+@-webkit-keyframes cssAnimation {
+    0%   {opacity: 1;}
+    20%  {opacity: 0.8;}
+    40%  {opacity: 0.7;}
+    60%  {opacity: 0.5;}
+    90%  {opacity: 0.2;}
+    100% {opacity: 0;}
+}
+
+.search_res {
+    width: 90%;
+    overflow-x: scroll;
+    scrollbar-color: #444;
+    font-size: 11px;
+    margin-top: 3%;
+}
+
+.search_res th {
+    font-size: 13px;
+    color: #777;
+    font-weight: 400;
+}
+
+.search_res table {
+    border-spacing: 30px;
+}
+
+.search_res table, tr {
+    border-bottom: 2px solid #888;
+}

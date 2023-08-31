@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SheetSearch</title>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+        <ul class=flashes>
+            {% for category, message in messages %}
+                <li class="{{ category }}">{{ message }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+    {% endwith %}
+    <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}"> -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+</head>
+<body>
+    <div class="container">
+        <div id="top-div">
+            <div id="circles">
+                <div id="red"></div>
+                <div id="yellow"></div>
+                <div id="green"></div>
+            </div>
+            <div id="search-bar">
+                <img src="../static/img/search.svg" alt="" srcset="">
+                <input type="text" placeholder="  Search Files ... ">
+            </div>
+            <div id="settings"></div>
+        </div>
+
+        <div class="main">
+            <div class="upload-section">
+                <div id="upload-space">
+                    <span>
+                        <i class="material-symbols-outlined">cloud_upload</i>
+                    </span>
+                    <input type="file" name="sheet" id="file-upload" hidden>
+                    <h2 id="dragText">Drag & Drop To Upload File</h2>
+                    <button id="btn"> Browse Files </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/scripts/main.js"></script>
+</body>
+</html>
